@@ -1,6 +1,9 @@
 pipeline {
   agent any
-  //
+ triggers {
+  cron 'H/33 * * * *'
+}
+
   stages {
     stage('echo') {
       steps {
