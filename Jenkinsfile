@@ -5,7 +5,8 @@ pipeline {
     stage('echo') {
       steps {
         echo 'hello'
-        sh './test.sh'
+        sh '''chmod u+x test.sh
+              ./test.sh'''
       }
     }
 
